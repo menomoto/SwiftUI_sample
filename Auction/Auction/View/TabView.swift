@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-struct ContentView : View {
+struct TabView : View {
     @State private var selection = 0
  
     var body: some View {
@@ -19,9 +19,9 @@ struct ContentView : View {
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct TabView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TabView()
     }
 }
 #endif
