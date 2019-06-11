@@ -82,16 +82,15 @@ struct DetailView : View {
     var item: Item
 
     var body: some View {
-//        ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: false, alwaysBounceVertical: true, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
-            
+        ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: false, alwaysBounceVertical: true, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
             VStack(alignment: .leading) {
                 Image(item.image).resizable().frame(width: imageWidth, height: imageWidth)
                 Text(item.title).bold().font(.title).padding(16)
                 Text("¥\(item.price)").font(.title).padding(16)
 
-                DetailGridView()
+                DetailGridView().frame(width: UIScreen.main.bounds.width, height: 100, alignment: .leading)
             }
-//        }
+        }
     }
 }
 
