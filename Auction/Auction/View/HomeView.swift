@@ -1,15 +1,13 @@
 import SwiftUI
 
 struct HomeView : View {
-    var index: Int {
-        return Int.random(in: 0..<items.count)
-    }
-    
     var body: some View {
         NavigationView {
             ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: false, alwaysBounceVertical: true, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
-                ForEach(items) { item in
-                    HomeRow(items: [items[self.index], items[self.index], items[self.index]])
+                ForEach(0..<items.count) { index in
+                    if (index + 1) % 3 == 0 || index + 1 == items.count {
+                        HomeRow(items: [items[index - 2], items[index - 1], items[index]])
+                    }
                 }
             }
             .navigationBarTitle(Text("Home"))
