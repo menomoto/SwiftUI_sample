@@ -18,4 +18,9 @@ let items: [Item] = [
     Item(id: 8, image: "23", title: "Item23", price: 35000),
     Item(id: 9, image: "24", title: "Item24", price: 29800),
     Item(id:10, image: "25", title: "Item25", price: 79800),
+    Item(id:11, image: "31", title: "Item31", price: 12000),
+    Item(id:12, image: "32", title: "Item32", price: 16000),
+    Item(id:13, image: "33", title: "Item33", price: 35000),
+    Item(id:14, image: "34", title: "Item34", price: 29800),
+    Item(id:15, image: "35", title: "Item35", price: 79800),
 ]
