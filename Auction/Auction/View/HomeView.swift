@@ -11,8 +11,8 @@ struct HomeView : View {
                 ForEach(items) { item in
                     HomeRow(items: [items[self.index], items[self.index], items[self.index]])
                 }
-                }
-                .navigationBarTitle(Text("Home"))
+            }
+            .navigationBarTitle(Text("Home"))
         }
     }
 }

@@ -9,8 +9,8 @@ struct ListView : View {
                         ItemRow(item: item)
                     }
                 }
-                }
-                .navigationBarTitle(Text("List"))
+            }
+            .navigationBarTitle(Text("List"))
         }
     }
 }
