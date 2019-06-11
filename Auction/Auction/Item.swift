@@ -7,7 +7,11 @@ struct Item : Hashable, Codable, Identifiable {
     let price: Int
 }
 
-let items: [Item] = [
+var items: [Item] {
+    return products + products + products
+}
+
+let products: [Item] = [
     Item(id: 1, image: "11", title: "Item01", price: 12000),
     Item(id: 2, image: "12", title: "Item02", price: 16000),
     Item(id: 3, image: "13", title: "Item03", price: 35000),

@@ -14,6 +14,8 @@ struct DetailView : View {
                 DetailGridView().frame(width: UIScreen.main.bounds.width, height: 100, alignment: .leading)
             }
         }
+        .navigationBarTitle(Text(item.title))
+
     }
 }
 
@@ -22,7 +24,9 @@ struct DetailGridView : View {
         ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: true, alwaysBounceVertical: false, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
             HStack {
                 ForEach(items) { item in
-                    Image(item.image).resizable().frame(width: 80, height: 80)
+                    NavigationButton(destination: DetailView(item: item)) {
+                        Image(item.image).resizable().renderingMode(.original).frame(width: 80, height: 80)
+                    }
                 }
             }
         }
