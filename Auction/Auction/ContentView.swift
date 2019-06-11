@@ -34,7 +34,7 @@ struct ListView : View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationButton(destination: DetailView()) {
+                    NavigationButton(destination: DetailView(item: item)) {
                         ItemRow(item: item)
                     }
                 }
@@ -59,25 +59,33 @@ struct ItemRow : View {
 }
 
 struct DetailView : View {
+    let imageWidth: CGFloat = UIScreen.main.bounds.width
+    var item: Item
+
     var body: some View {
-        Text("Detail")
+//        ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: false, alwaysBounceVertical: true, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
+            
+            VStack(alignment: .leading) {
+                Image(item.image).resizable().frame(width: imageWidth, height: imageWidth)
+                Text(item.title).bold().font(.title).padding(16)
+                Text("¥\(item.price)").font(.title).padding(16)
+
+                DetailGridView()
+            }
+//        }
     }
 }
 
-let items: [Item] = [
-    Item(id: 1, image: "01", title: "Item01", price: 12000),
-    Item(id: 2, image: "02", title: "Item02", price: 16000),
-    Item(id: 3, image: "03", title: "Item03", price: 35000),
-    Item(id: 4, image: "04", title: "Item04", price: 29800),
-    Item(id: 5, image: "05", title: "Item05", price: 79800),
-    Item(id: 6, image: "06", title: "Item06", price: 128000),
-]
-
-struct Item : Hashable, Codable, Identifiable {
-    var id: Int
-    let image: String
-    let title: String
-    let price: Int
+struct DetailGridView : View {
+    var body: some View {
+        ScrollView(isScrollEnabled: true, alwaysBounceHorizontal: true, alwaysBounceVertical: false, showsHorizontalIndicator: false, showsVerticalIndicator: false) {
+            HStack {
+                ForEach(items) { item in
+                    Image(item.image).resizable().frame(width: 80, height: 80)
+                }
+            }
+        }
+    }
 }
 
 #if DEBUG

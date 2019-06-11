@@ -14,6 +14,7 @@
 		D74A1B4422AF8ED000A0A072 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74A1B4322AF8ED000A0A072 /* Preview Assets.xcassets */; };
 		D74A1B4722AF8ED000A0A072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74A1B4522AF8ED000A0A072 /* LaunchScreen.storyboard */; };
 		D74A1B5222AF8ED100A0A072 /* AuctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A1B5122AF8ED100A0A072 /* AuctionTests.swift */; };
+		D74A1B5D22AFA11300A0A072 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A1B5C22AFA11300A0A072 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D74A1B4D22AF8ED100A0A072 /* AuctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74A1B5122AF8ED100A0A072 /* AuctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTests.swift; sourceTree = "<group>"; };
 		D74A1B5322AF8ED100A0A072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74A1B5C22AFA11300A0A072 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				D74A1B4522AF8ED000A0A072 /* LaunchScreen.storyboard */,
 				D74A1B4822AF8ED000A0A072 /* Info.plist */,
 				D74A1B4222AF8ED000A0A072 /* Preview Content */,
+				D74A1B5C22AFA11300A0A072 /* Item.swift */,
 			);
 			path = Auction;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74A1B5D22AFA11300A0A072 /* Item.swift in Sources */,
 				D74A1B3B22AF8ECF00A0A072 /* AppDelegate.swift in Sources */,
 				D74A1B3D22AF8ECF00A0A072 /* SceneDelegate.swift in Sources */,
 				D74A1B3F22AF8ECF00A0A072 /* ContentView.swift in Sources */,
