@@ -29,3 +29,10 @@ struct ItemRow : View {
     }
 }
 
+#if DEBUG
+struct ListView_Previews : PreviewProvider {
+    static var previews: some View {
+        ListView()
+    }
+}
+#endif

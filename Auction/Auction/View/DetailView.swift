@@ -32,3 +32,11 @@ struct DetailGridView : View {
         }
     }
 }
+
+#if DEBUG
+struct DetailView_Previews : PreviewProvider {
+    static var previews: some View {
+        DetailView(item: items[0])
+    }
+}
+#endif
